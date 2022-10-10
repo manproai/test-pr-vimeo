@@ -26,9 +26,13 @@ router.post("/login", (req, res) => {
 
 router.get("/dashboard", (req, res) => {
 
-    if(req.session.user) {
+    if(req.session.user ) {
         const user = req.session.user;
-        res.render('dashboard', {user: "user", title: "Login", number: req.session.number});
+        res.render('dashboard', {
+            user: "user", 
+            title: "Login", 
+            number: req.session.number, 
+            referenced: req.session.referenced});
     } else {
         // popup.alert({
         //     content: 'Unauthorized user'
@@ -53,6 +57,7 @@ router.post("/video", (req, res) => {
 
     if(req.body.number){
         req.session.number = req.body.number;
+        req.session.referenced = true;
         res.redirect('/dashboard')
         // res.send('Succefully logged in')
     } else {

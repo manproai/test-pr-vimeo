@@ -37,7 +37,7 @@
 <div class="video-gallery-container">
     <h2 class="title">Vimeo videos</h2>
 
-    <div class="video-gallery text-right">
+    <div class="video-gallery text-center">
         <form action="/video" method="POST" class="pt-3">
             <div class="form-group">
                 <input type="number" class="form-control" placeholder="number" name="number">
@@ -60,6 +60,8 @@
                   allowfullscreen
                 ></iframe>
               </div>
+        <%} else if(!referenced) {%>
+          <h1>Please insert an ID</h1>
         <%} else {%>
             <h1>Video with this ID has not been found</h1>
         <%}%>
