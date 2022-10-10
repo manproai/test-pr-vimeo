@@ -3,9 +3,12 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background-image: url('assets/bg.png');
+    background-image: url('assets/439712.webp');
     background-size: cover;
     background-repeat: no-repeat;
+}
+.container.w-25.border.py-5{
+    background-color: rgb(244, 246, 209);
 }
 .center-div{
     padding-top: 10%;

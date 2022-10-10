@@ -4,8 +4,8 @@ const path = require("path")
 const app = express();
 const bodyParser = require("body-parser");
 const { v4: uuidv4 } = require("uuid");
-const allRoutes = require("./router");
 const session = require("express-session");
+const allRoutes = require("./router");
 
 //view engine
 app.set("view engine", "ejs")
@@ -16,10 +16,9 @@ app.use('/static', express.static(path.join(__dirname, 'public/assets')));
 
 //session
 app.use(session({
-  secret: uuidv4(),
+  secret: "uuidv4()",
   resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true }
+  saveUninitialized: true
 }))
 
 //getting data as json 
