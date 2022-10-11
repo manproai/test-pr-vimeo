@@ -35,7 +35,7 @@
 <!-- </div> -->
 
 <div class="video-gallery-container">
-    <h2 class="title">Vimeo videos</h2>
+    <h2 class="text-center">Find Vimeo videos</h2>
 
     <div class="video-gallery text-center">
         <form action="/video" method="POST" class="pt-3">
@@ -61,13 +61,16 @@
                 ></iframe>
               </div>
         <%} else if(!referenced) {%>
-          <h1>Please insert an ID</h1>
+          <h1 class="text-center">Please insert an ID</h1>
         <%} else {%>
             <h1>Video with this ID has not been found</h1>
         <%}%>
         <h3 class="video-title">
-          Design Responsive Course Cards Using HTML, CSS & JavaScript
+          The link genereted for this Video ID
         </h3>
+        <h5 class="text-center">
+          <%= locals.url ? locals.url : ""%>
+        </h5>
       </div>
     </div>
   </div>
