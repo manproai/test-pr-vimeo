@@ -59,10 +59,7 @@ router.post("/video", (req, res) => {
 
     if(req.body.number){
 
-        let client = new Vimeo(
-            "e87860aa6c48ab1f5d46d9e726ba9a0394b57f3b", 
-            "LBQrhnf+AC6wx5wvKqLJZLgtCpPyJAsdPfUE7oPgYOIyk5z835xS07w7XIXq2JGus+wIntugNyJSRoZR/JRpOY58bTTWn3P5gIkh4cgf1M+7Y0o6NPXDOS334lH/g4rS", 
-            "5cb584ea4bd49332ab0bd6eacaae6389");
+        let client = new Vimeo(CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN);
           
             client.request({
               method: 'GET',
